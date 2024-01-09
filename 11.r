@@ -35,14 +35,16 @@ cat("Standard deviation of purchase amounts:", std_dev_purchase_amount,
 purchase_data$Segment <- ifelse(purchase_data$Purchase_Amount <median_purchase_amount, "Low Spender", "High Spender")
 print(purchase_data)
 
-histogram_plot <- ggplot(purchase_data, aes(x =Purchase_Amount)) + 
-  geom_histogram(binwidth = 25, fill='blue',color = "red") +
-  labs(title = "Distribution of Purchase Amount", x = "Purchase Amount", y = "Frequency")
 
-print(histogram_plot)
+hist(purchase_data$Purchase_Amount, main = "Distribution of Purchase
+Amounts", xlab = "Purchase Amount", col = "blue", border = "black")
 
-#hist(purchase_data$Purchase_Amount, main = "Distribution of Purchase
-#Amounts", xlab = "Purchase Amount", col = "blue", border = "black")
+#histogram_plot <- ggplot(purchase_data, aes(x =Purchase_Amount)) + 
+  #geom_histogram(binwidth = 25, fill='blue',color = "red") +
+  #labs(title = "Distribution of Purchase Amount", x = "Purchase Amount", y = "Frequency")
+
+#print(histogram_plot)
+
 
 
 
