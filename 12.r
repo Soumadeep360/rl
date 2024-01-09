@@ -44,7 +44,7 @@ cat("The most frequently used venue for matches is", most_freq_venue, "\n")
 
 
 # Task 5: Visualization
-matches_won_data <- as.data.frame(Matches_won_by_team)
-matches_won_data$Team <- rownames(matches_won_data)
+#matches_won_data <- as.data.frame(Matches_won_by_team)
+#matches_won_data$Team <- rownames(matches_won_data)
 barplot(Matches_won_by_team, main = "Number of Matches Won by Each Team",
         xlab = "Team", ylab = "Wins", col = rainbow(n_teams))
