@@ -18,13 +18,10 @@ Total_matches <- nrow(IPL_data)
 cat("The total number of matches in the dataset is", Total_matches, "\n")
 
 # Determine the number of unique teams that have participated in IPL matches
-n_teams <- length(unique(c(data$team1, data$team2)))
-cat("The number of unique teams that have participated in IPL matches is", n_teams,
-    "\n")
+n_teams <- length(unique(c(IPL_data$team1, IPL_data$team2)))
+cat("The number of unique teams that have participated in IPL matches is", n_teams,"\n")
 Unique_teams <- unique(c(IPL_data$team1, IPL_data$team2))
-cat("The number of unique teams that have participated in IPL matches is",
-    length(Unique_teams), "\n")
-cat("The unique teams:", Unique_teams,"\n")d
+cat("The unique teams:", Unique_teams,"\n")
 
 # Task 3: Team Performance Analysis
 # Calculate the number of matches won by each team and display the results
