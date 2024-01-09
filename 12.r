@@ -12,16 +12,17 @@ summary(IPL_data)
 # Output summary statistics of numerical columns
 summary(IPL_data[, c("win_by_runs", "win_by_wickets")])
 
+
 # Task 2: Basic Data Insights
 # Calculate and display the total number of matches in the dataset
 Total_matches <- nrow(IPL_data)
 cat("The total number of matches in the dataset is", Total_matches, "\n")
-
 # Determine the number of unique teams that have participated in IPL matches
 n_teams <- length(unique(c(IPL_data$team1, IPL_data$team2)))
 cat("The number of unique teams that have participated in IPL matches is", n_teams,"\n")
 Unique_teams <- unique(c(IPL_data$team1, IPL_data$team2))
 cat("The unique teams:", Unique_teams,"\n")
+
 
 # Task 3: Team Performance Analysis
 # Calculate the number of matches won by each team and display the results
@@ -30,7 +31,6 @@ cat("The number of matches won by each team is:\n")
 print(Matches_won_by_team)
 # Compute the average win by runs in the matches
 avg_runs <- mean(as.numeric(IPL_data$win_by_runs), na.rm = TRUE)
-
 cat("The average total runs scored in matches ", round(avg_runs, 2), "\n")
 # Calculate the average win by wickets in the matches
 avg_wickets <- mean(as.numeric(IPL_data$win_by_wickets),na.rm = TRUE)
