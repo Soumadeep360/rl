@@ -36,14 +36,15 @@ purchase_data$Segment <- ifelse(purchase_data$Purchase_Amount <median_purchase_a
 print(purchase_data)
 
 
-hist(purchase_data$Purchase_Amount, main = "Distribution of Purchase
-Amounts", xlab = "Purchase Amount", col = "blue", border = "black")
 
-#histogram_plot <- ggplot(purchase_data, aes(x =Purchase_Amount)) + 
-  #geom_histogram(binwidth = 25, fill='blue',color = "red") +
-  #labs(title = "Distribution of Purchase Amount", x = "Purchase Amount", y = "Frequency")
+histogram_plot <- ggplot(purchase_data, aes(x =Purchase_Amount)) + 
+  geom_histogram(binwidth = 25, fill='blue',color = "red") +
+  labs(title = "Distribution of Purchase Amount", x = "Purchase Amount", y = "Frequency")
 
-#print(histogram_plot)
+print(histogram_plot)
+
+# hist(purchase_data$Purchase_Amount, main = "Distribution of Purchase
+# Amounts", xlab = "Purchase Amount", col = "blue", border = "black")
 
 
 
