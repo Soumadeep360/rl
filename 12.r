@@ -24,6 +24,12 @@ cat("\n")
 team_wins <- table(ipl_data$winner)
 cat("Number of matches won by each team:\n", team_wins, "\n\n")
 
+ avg_runs <- mean(as.numeric(IPL_data$win_by_runs))
+ cat("The average total runs scored in matches ", avg_runs, "\n")
+ 
+ avg_wickets <- mean(as.numeric(IPL_data$win_by_wickets))
+ cat("The average total wickets taken in the matches",avg_wickets, "\n")
+
 
 # Task 4: Venue Insights
 most_frequent_venue <- names(which.max(table(ipl_data$venue)))
