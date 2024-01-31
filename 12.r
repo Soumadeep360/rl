@@ -39,7 +39,7 @@ cat("Most frequently used venue for matches:", most_frequent_venue, "\n")
 #team_wins_df <- data.frame(Team = names(team_wins), Wins = as.numeric(team_wins))
 # Creating a bar plot
 barplot(team_wins, main = "Number of Matches Won by Each Team",
-        xlab = "Team", ylab = "Wins", col = rainbow(n_teams))
+        xlab = "Team", ylab = "Wins", col = rainbow(length(unique_teams)))
 
 
 
